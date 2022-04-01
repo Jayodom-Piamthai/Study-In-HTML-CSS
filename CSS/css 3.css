@@ -1,4 +1,10 @@
-#image{
+body{
+    background: rgba(90, 136, 237, 0.385);
+}
+/*CSS box model : content > padding > border > margin*/
+/*content sizing*/
+.image{
     height: 100px;
     width: 60%;
 }
+/*border*/
