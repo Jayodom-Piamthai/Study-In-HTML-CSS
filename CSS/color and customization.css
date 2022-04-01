@@ -1,0 +1,44 @@
+body{
+    background: rgba(90, 136, 237, 0.385);
+    /*Alternate-img background*/
+    /*background-image:*/ 
+}
+.title{
+    color: orange;
+    font: FC Lamoon;
+}
+.opening{/*dont forgot the dot(.) for the class!*/
+    color: white;
+}
+#next_sentence{/*dont forgot the sharp(#) for the ID!*/
+    color:blueviolet;
+}
+/*customize heiarchy list: STYLE > ID > CLASS > HEAD/BODY
+/*this is how you do the comment BTW*/
+/**/
+
+/*customizing list*/
+li:last-child{ /*colored last child in the list*/
+    color:steelblue
+}
+td:only-child{ /*if theres only one child in the table,color it white*/
+    color:white
+}
+#RickRoll:link{/*unpressed link*/
+    color: red;
+}
+#RickRoll:visited{/*pressed link*/
+    color: black;
+}
+
+
+/*some advanced selectors*/
+hr + p{/*by using(+) every <P> DIRECTLY AFTER <hr> will always be orange */
+    color: orangered;
+}
+ol > li{/*by using(>) every <li> INSIDE <ol> wil be green*/
+    color:green /*customizing list still gonna overide advance selectors*/
+}
+article li{/*everything inside <article> that is <li> or its child will get colored*/
+    color: purple;
+}

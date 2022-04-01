@@ -1,0 +1,28 @@
+/*Gradients and shits*/
+good_shit{
+    width: 200px;
+    height: 200px;
+    background-color:linear-gradient(to right/*set depend on the direction*/),rgb(20, 69,103),orange ;
+    background-color:radial-gradient /*from outter to middle*/,rgb(20, 69,103),orange ;
+}
+
+/*text and font manipulation*/
+.none{/*remove EVERY styling on the text*/
+    text-decoration: none;
+}
+.underline{/*underline*/
+    text-decoration: underline;
+}
+.overline{/*line above text*/
+    text-decoration: overline;
+}
+.lineThrough{/*put a beeg line thruu the middle*/
+    text-decoration: line-through;
+}
+body{
+    text-transform: uppercase;/*uppercasing all letters*/
+    text-align: center;/*all text will be middled*/
+    text-align: justify;/*all sentence ends at the same lenght*/
+    font-size: 20em;/*font size-unit em*/
+    font-weight: 420;/*font boldness*/
+}
