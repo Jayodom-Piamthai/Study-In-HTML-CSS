@@ -8,3 +8,27 @@ body{
     width: 60%;
 }
 /*border*/
+#border{
+    /*4 types of borders*/
+    border: 20px solid rgba(72, 0, 255, 0.385) ;
+    border: 20px dotted rgba(72, 0, 255, 0.385) ;
+    border: 20px double rgba(72, 0, 255, 0.385) ;
+    border: 20px dashed rgba(72, 0, 255, 0.385) ;
+}
+/*margin and padding*/
+#margin{
+    border: 20px double rgba(72, 0, 255, 0.385) ;
+    margin: 20px;   /*tis the space from EVERYTHING,from ALL SIDES*/
+    margin: 80px 20px;/*top-bottom   left-right*/
+}
+#padding{
+    padding: 5px;/*tis the space from the media til the border*/
+    padding-bottom: 10px;/*directional padding*/
+    padding: 10px 20px 30px 5px;/*anti-clockwised padding:top-right-bottom-left*/
+    border: 10px double rgba(255, 128, 0, 0.385);
+}
+/*float and display*/
+#float{
+    float: right;/*set to the side of choosing side*/
+    display: block;
+}
