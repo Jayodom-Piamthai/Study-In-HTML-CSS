@@ -13,7 +13,7 @@ body{
 #next_sentence{/*dont forgot the sharp(#) for the ID!*/
     color:blueviolet;
 }
-/*customize heiarchy list: STYLE > ID > CLASS > HEAD/BODY
+/*customize heiarchy priority list: STYLE > ID > CLASS > HEAD/BODY
 /*this is how you do the comment BTW*/
 /**/
 

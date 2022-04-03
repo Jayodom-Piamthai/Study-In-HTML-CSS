@@ -1,0 +1,31 @@
+.flextest{
+    text-align: center;
+    font-family:sans-serif ;
+    margin: 5px;
+    width: 20px;
+    line-height: 20px;
+    /*Flex*/
+    display: flex;/*display as flex template*/
+    flex-direction: column;/*set direction of item placement*/
+    flex-wrap: wrap;/*wrap around to new row if not enough space*/
+
+    align-items: flex-end;/*set to be at the head or the end of the page*/
+    align-items: flex-start;
+    align-items: stretch/*stretch till the end of a page*/;
+    align-items: baseline; /*have the middle zone at the same place,along the same line*/
+
+    align-items: center;/*everything at the center*/
+    justify-content: center;
+    /*you can set style="order: n"; to set the arrange order of items */
+
+    flex-grow: 1;/*grow size inside a container*/
+    flex-shrink: 1;/*shrink based on browser size*/
+    flex-basis: 100px;/*starting lenght of item*/
+    /*boiled down version*/
+    flex: 1 1 100px;/*grow,shrink,basis*/ 
+
+    /*flex alignment*/
+    align-self: flex-start;/*top of the page possible*/
+    align-self: flex-end;/*lowest possible*/
+    align-self: center;/*at the very center possible*/
+}
