@@ -1,0 +1,61 @@
+.bullshitButton{
+    background-color: red;
+    border: 5px;
+    font-weight: 30;
+    font-size: medium;
+    font-family: sans-serif;
+    background: rgb(255, 21, 45);
+
+    /*transition*/
+    transition: background 2s ease-in-out;/*fade by the time */
+    transition: all 300ms ease;
+
+    -webkit-transition: all 3s ease;/*for chrome and safari*/
+    -moz-transition: all 3s ease;/*for mozila firefox*/
+    -o-transition:all 3s ease;/*for opera*/
+    /*3 of this cannot stack,ya have to do all of theese individually to make web suitable for all browser*/
+
+
+    /*transform*/
+    transform: translate(20px 30px);/*move in x and y axis*/
+    transform: scale(2.5);/*size up*/
+    transform: rotate(45deg);/*degree,clockwise*/
+    transform: skewX(45deg);/*sway in a degree,in x axis*/
+    transform: skewY(45deg);/*sway in a degree,in y axis*/
+    transform: matrix(1,0.45,0.25,1,40,50);/*scaleX-skewY-skewX-scaleY-translateX-translateY*/   /*NOT RECOMENDED///USE ONLY WHEN NESCESSARY*/
+}
+.bullshitButton:hover{
+    transition: rgb(0, 255, 64) ;
+    padding: 20px 30px;
+}
+
+.header{
+    animation-name: blue-to-green;
+    animation-duration: 3s;/*animation's period*/
+    animation-timing-function: linear;/*animation movement type*/
+    animation-delay: -3s;/*a delay*/
+    animation-iteration-count: infinite;/*loop amount of the animation*/
+    animation-direction: normal;
+    animation-direction: alternate;/*backward*/
+    animation-direction: reverse;/*to end and back*/
+    animation-direction: alternate-reverse;/*mixed*/ 
+    /*boiled down*/
+    -webkit-animation: blue-to-green 3s linear -3s infinite reverse; 
+     
+    
+}
+/*animations*/
+@keyframes blue-to-green{
+    0% {
+        background:rgb(0, 64, 255);
+        transform:translate(0px);
+    }
+    50%{
+        background:rgb(0, 255, 255);
+        transform:(0px,10px);
+    }
+    100%{
+        background: rgb(0, 255, 64);
+        transform:(0px,20px);
+    }
+}
