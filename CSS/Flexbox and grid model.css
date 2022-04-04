@@ -1,9 +1,4 @@
-.flextest{
-    text-align: center;
-    font-family:sans-serif ;
-    margin: 5px;
-    width: 20px;
-    line-height: 20px;
+.flexbox{
     /*Flex*/
     display: flex;/*display as flex template*/
     flex-direction: column;/*set direction of item placement*/
@@ -28,4 +23,24 @@
     align-self: flex-start;/*top of the page possible*/
     align-self: flex-end;/*lowest possible*/
     align-self: center;/*at the very center possible*/
+}
+
+.grid{
+    /*Grid*/
+    display: grid;/*display in grid template*/
+    grid-template-columns: 10px 20px 30px;/*column 1-2-3 width*/
+    grid-template-rows: auto auto;/*row 1-2 heigh*/
+    /*for some perfection lookin shits,just fucking auto em all*/
+    justify-content:start ;/*setting a position of the content to the left*/
+    justify-content: space-evenly;/*set the content to the middle with even spaces*/
+    justify-content: space-around;/*set the context*/
+
+    /*grid positioning*/
+    grid-row: 2/ span 5;
+    grid-column: 1/ span 3 ;/*start/limit*/
+    /*boiled down*/
+    grid-area: 2 / 1 / span 5 / span 3 ;/*rowStart/ColumnStart/RowSpan/ColumnSpan*/
+    row-gap: 10px;
+    column-gap: 10px;
+    gap: 20px 20px;/*column gap-row gap*/
 }
