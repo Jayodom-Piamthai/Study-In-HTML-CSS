@@ -1,0 +1,20 @@
+body{
+    background: rgb(0, 76, 255);
+}
+#main{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-gap: 5px
+    
+}
+.sidebar{
+    background: rgb(255, 119, 0);
+    grid-column: 2,span 2;
+}
+.post{
+    font-family: sans-serif;
+}
+img{
+    width: 420px;
+    height: 690px;
+}
