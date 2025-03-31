@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  </head>
+  <body>
+    <!-- best practice for nesting is container then row then collumn -->
+    <div class="container">
+        what the actual hell
+        <!-- row can collumn can be nest inside their own and eachother infinitely -->
+        <div class="row row-cols-2 gy-5"><!--row can be set col amount and gap between them(5 at most)-->
+          <div class="col"><!--column,take as much horizontal space possible-->
+            <div class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+          </div>
+          <div class="col-6"><!--set size to 6-->
+            <div class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+          </div>
+          <div class="col-xl-3 col-l-2 col-s-1"> <!--set size at different screen size-->
+            <div class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+          </div>
+          <div class="col-auto"> <!--automatically adjust the space-->
+            <div class="box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+          </div>
+        </div>
+    </div>
+    <div class="container ">
+      <!-- table can be decorated and set as see fit,set collor,effect,border,wrapping,spacing -->
+      <table class="table table-primary table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td class="table-danger ">Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <h1>this can be use for any form of data recieving,choice,color,input,anything the user can put into our site</h1>
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control-plaintext" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email(this will looks like a plaintext)">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="color" class="form-label">color</label>
+          <input type="color" class="form-control form-control-color" id="color" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!-- input group,unit and shits -->
+      <div class="input-group mb-3">      <!-- input group size -->
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>      <!-- text for group -->
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+      </div>
+      
+      <label for="basic-url">Your vanity URL</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+        </div>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+      
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+          <span class="input-group-text">.00</span>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+
+    <!-- floating labels shrink label and float it above when inputting,quite fance,need to put input above label element -->
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    
+    <!-- validation of form to check if the input is acceptable -->
+    <form action="/action_page.php" class="was-validated"> <!--this class make it validate the box imediately after load,so add class in when typing with js would be better-->
+      <div class="mb-3 mt-3">
+        <label for="uname" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+        <!-- response after valid and invalid input -->
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- button -->
+    <button class="btn btn-primary btn-lg">
+      big blue button
+    </button>
+    <button class="btn btn-outline-primary btn-s">
+      small outlined button
+    </button>
+    <!-- button grouping -->
+    <div class="btn-group">
+      <button class="btn btn-primary btn-lg">
+        big blue button
+      </button><button class="btn btn-primary btn-lg">
+        big blue button
+      </button><button class="btn btn-primary btn-lg">
+        big blue button
+      </button>
+    </div>
+
+<!-- card component -->
+    <div class="container my-3"><!-- my is for padding for uptop and below,see more in doc -->
+      <!-- outter card  -->
+      <div class="card">
+        <h2 class="card-header">
+          LOREM IPSUM PART ONE
+        </h2>
+        <div class="card-body">
+          <!-- inner card,use two layer like this to pad a distance between border of the card -->
+          <h2 class="card-title">
+            LOREM Ipsum
+          </h2>
+          <span class="card-description">
+            when does one know the true lorem ipsum?
+          </span>
+          <div class="card-text">
+            LOREMMMMMMMMMMMM IPSUM!
+          </div>
+        </div>
+        <h2 class="card-header">
+          END OF PART ONE
+        </h2>
+      </div>
+    </div>
+
+    <!-- modals -->
+    <div class="container my-3">    
+      <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal">
+        open sesame
+      </button>
+      <div class="modal" id="modal">
+        modallll
+      </div>
+  </body>
+</html>
